@@ -121,7 +121,7 @@ function findCategory(matchedText) {
 
 // Takes the raw text someone typed, escapes it for safety, then replaces
 // every entity match with the same text wrapped in a <mark> tag carrying
-// a category-specific class (e.g. entity-person), which CSS then colors.
+// a category-specific class which CSS then colors.
 function highlightEntities(text) {
     const safeText = escapeHtml(text);
     return safeText.replace(entityPattern, (match) => {

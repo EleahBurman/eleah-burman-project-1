@@ -348,18 +348,28 @@ footer {
     margin-bottom: 0.75rem;
 }
 
-#highlight-output {
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-#highlight-output mark {
-    background-color: var(--color-accent);
-    color: var(--color-bg);
-    padding: 0.1rem 0.3rem;
+mark {
+    padding: 0.1rem 0.35rem;
     border-radius: 3px;
     font-family: var(--font-mono);
     font-size: 0.85rem;
+    color: var(--color-bg);
+}
+
+.entity-person {
+    background-color: var(--color-accent);
+}
+
+.entity-org {
+    background-color: var(--color-accent-2);
+}
+
+.entity-loc {
+    background-color: var(--color-accent-3);
+}
+
+.entity-tech {
+    background-color: #5C6470;
 }
 
 .project-grid {
