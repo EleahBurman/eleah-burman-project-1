@@ -11,7 +11,11 @@ TODO: add the course site/syllabus link here
 A personal, tech-forward portfolio homepage built with vanilla HTML5, CSS3, and ES6 modules — no frameworks, no backend. The site targets recruiters and hiring managers in ML/NLP and software engineering, presenting my background, real projects, and an interactive JavaScript demo that reflects the NLP work I actually build.
 
 ## Screenshot
-TODO: add a screenshot of the deployed site once index.html/projects.html/resume.html are built and live (this is the final-site screenshot the rubric asks for — separate from the design mockup below).
+![Homepage screenshot](images/site-screenshot.png)
+
+## Live Site
+[https://eleahburman.github.io/eleah-burman-project-1/](https://eleahburman.github.io/eleah-burman-project-1/)
+
 
 ## Instructions to Build
 ```bash
