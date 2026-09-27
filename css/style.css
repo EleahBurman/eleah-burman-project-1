@@ -246,7 +246,6 @@ footer {
     letter-spacing: 0.05em;
     max-width: 680px;
     margin: 2rem 0 1.5rem;
-    padding: 0 2rem;
 }
 
 .projects {
@@ -414,11 +413,13 @@ mark {
 }
 
 .resume-section {
-    padding-top: 3rem;
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .contact {
-    padding-bottom: 4rem;
+    background-color: var(--color-surface);
+    border-top: 1px solid var(--color-border);
 }
 
 .education-list {
@@ -426,7 +427,11 @@ mark {
 }
 
 .education-list li {
-    margin-bottom: 1.25rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
 }
 
 .education-list .card-title {

@@ -59,6 +59,8 @@ Site map — 3 pages:
 
 ## Use of GenAI
 TODO: fill in once the AI-generated page (resume.html) is built. Document: model name + version, the prompts used, and how the output was reviewed/edited.
+AI Agent - Claude
+Prompt - Build resume.html for a personal portfolio site, matching the existing visual system used in index.html and projects.html: CSS variables for colors (--color-bg: #FBFAF7, --color-surface: #FAFAFA, --color-ink: #1B1D22, --color-accent: #3730A6, --color-accent-2: #0F6E56, --color-accent-3: #B8860B), fonts (Newsreader serif for body/headings, JetBrains Mono for tags/labels/nav), the same header/nav structure, and the small-uppercase-indigo .page-title label style used on the Projects page. Single-column stacked layout, left-aligned, matching the rest of the site — no side-by-side columns. The page needs three sections: (1) a Resume section with a download link/button to a PDF resume, (2) an Education section listing three degrees — Northeastern University M.S. Computer Science (AI/ML focus), expected June 2027; General Assembly Software Engineering Immersive (450+ hrs), June 2023; New York University B.F.A. — and (3) a Contact section with an email link, GitHub link, and LinkedIn link. Use semantic HTML5, proper heading hierarchy (this page's own <h1> should be "Resume"), and reuse existing class names/patterns from the other two pages wherever the same visual pattern applies (e.g. .btn-primary for the download button).
 
 ## License
 MIT — see [LICENSE](./LICENSE)
