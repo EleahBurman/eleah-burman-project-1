@@ -438,25 +438,73 @@ mark {
     border-top: 1px solid var(--color-border);
 }
 
-.education-list {
+.timeline {
     list-style: none;
+    display: flex;
+    position: relative;
+    gap: 1rem;
 }
 
-.education-list li {
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    padding: 1rem 1.25rem;
-    margin-bottom: 1rem;
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 7px;
+    right: 7px;
+    height: 2px;
+    background-color: var(--color-border);
 }
 
-.education-list .card-title {
+.timeline-item {
+    flex: 1;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.timeline-item a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding-top: 1.75rem;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    border: 3px solid var(--color-surface);
+    transition: transform 0.15s ease;
+}
+
+.timeline-item a:hover .timeline-dot {
+    transform: translateX(-50%) scale(1.2);
+}
+
+.timeline-item a:hover .card-title {
+    color: var(--color-accent);
+}
+
+.timeline-item .card-title {
+    font-size: 1.05rem;
+    transition: color 0.15s ease;
+}
+
+.timeline-item .description {
+    font-size: 0.85rem;
+}
+.card-title {
     font-size: 1.15rem;
     font-weight: 600;
     margin-bottom: 0.25rem;
 }
 
-.education-list .description {
+.description {
     color: var(--color-text-secondary);
 }
 
