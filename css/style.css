@@ -130,3 +130,65 @@ header {
     color: var(--color-accent-2);
     font-size: 0.95rem;
 }
+
+.skills {
+    max-width: 680px;
+    padding: 2rem 2rem 4rem;
+}
+
+.skills .card-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.skills h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4A4A4A;
+    margin: 1.5rem 0 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.skill-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.skill-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background-color: #F5F3ED;
+    border-radius: 6px;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.95rem;
+}
+
+.tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--color-bg);
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+}
+
+.tag-lang {
+    background-color: var(--color-accent);
+}
+
+.tag-web {
+    background-color: var(--color-accent-2);
+}
+
+.tag-ml {
+    background-color: var(--color-accent-3);
+}
+
+.tag-data {
+    background-color: #5C6470;
+}
