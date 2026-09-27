@@ -3,7 +3,9 @@
     --color-surface: #FAFAFA;
     --color-ink: #1B1D22;
     --color-muted: #6B6B6B;
+    --color-text-secondary: #4A4A4A;
     --color-border: #E5E3DC;
+    --color-border-light: #D8D8D8;
     --color-accent: #3730A6;
     --color-accent-2: #0F6E56;
     --color-accent-3: #B8860B;
@@ -82,7 +84,7 @@ header {
 
 .hero .description {
     font-size: 1.1rem;
-    color: #4A4A4A;
+    color: var(--color-text-secondary);
     margin-bottom: 2rem;
 }
 
@@ -100,13 +102,13 @@ header {
 
 .btn-primary {
     background-color: var(--color-accent);
-    color: var(--color-bg);  
+    color: var(--color-bg);
 }
 
 .btn-secondary {
     background-color: transparent;
     color: var(--color-ink);
-    border: 1px solid #D8D8D8;
+    border: 1px solid var(--color-border-light);
 }
 
 .btn-primary:hover {
@@ -130,7 +132,7 @@ header {
 
 .about .description {
     font-size: 1.05rem;
-    color: #4A4A4A;
+    color: var(--color-text-secondary);
     margin-bottom: 1rem;
 }
 
@@ -156,7 +158,7 @@ header {
 .skills h3 {
     font-size: 1rem;
     font-weight: 600;
-    color: #4A4A4A;
+    color: var(--color-text-secondary);
     margin: 1.5rem 0 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -215,7 +217,7 @@ header {
     font-family: var(--font-mono);
     font-size: 0.85rem;
     background-color: transparent;
-    border: 1px solid #D8D8D8;
+    border: 1px solid var(--color-border-light);
     border-radius: 20px;
     padding: 0.4rem 1rem;
     cursor: pointer;
@@ -226,4 +228,43 @@ header {
     background-color: var(--color-ink);
     color: var(--color-bg);
     border-color: var(--color-ink);
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-muted);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 640px) {
+    header {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+
+    .nav-bar ul {
+        gap: 1rem;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .hero,
+    .about,
+    .skills {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        display: block;
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 0.75rem;
+    }
 }
