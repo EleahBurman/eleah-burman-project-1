@@ -76,10 +76,26 @@ header {
     margin-bottom: 0.5rem;
 }
 
+.hero-heading {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.profile-photo {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-accent);
+}
+
 .main-title {
+    margin-bottom: 0;
     font-size: 3rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    line-height: 1;
 }
 
 .hero .description {
