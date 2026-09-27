@@ -86,15 +86,24 @@ header {
     font-family: var(--font-mono);
     font-size: 0.95rem;
     margin-right: 1rem;
+    transition: background-color 0.15s ease;
 }
 
 .btn-primary {
     background-color: var(--color-accent);
-    color: var(--color-bg);
+    color: var(--color-bg);  
 }
 
 .btn-secondary {
     background-color: transparent;
     color: var(--color-ink);
     border: 1px solid #D8D8D8;
+}
+
+.btn-primary:hover {
+    background-color: #2B2483;
+}
+
+.btn-secondary:hover {
+    background-color: #F0EFE9;
 }
