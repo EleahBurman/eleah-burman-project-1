@@ -1,0 +1,54 @@
+:root {
+    --color-bg: #FBFAF7;
+    --color-ink: #1B1D22;
+    --color-accent: #3730A6;
+    --color-accent-2: #0F6E56;
+    --color-accent-3: #B8860B;
+    --font-body: "Newsreader", serif;
+    --font-mono: "JetBrains Mono", monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #E5E3DC;
+}
+
+.logo {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--color-ink);
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: var(--color-ink);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+}
+
+.nav-bar a[aria-current="page"] {
+    color: var(--color-accent);
+}
