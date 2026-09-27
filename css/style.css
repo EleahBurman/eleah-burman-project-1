@@ -442,4 +442,12 @@ mark {
     .mini-project-grid {
         grid-template-columns: 1fr;
     }
+    
+    .interactive-demo {
+        padding: 1rem;
+    }
+
+    .interactive-demo textarea {
+        font-size: 16px;
+    }
 }
