@@ -406,6 +406,45 @@ mark {
     margin-bottom: 0.4rem;
 }
 
+.resume-section,
+.education,
+.contact {
+    max-width: 680px;
+    padding: 2rem;
+}
+
+.resume-section {
+    padding-top: 3rem;
+}
+
+.contact {
+    padding-bottom: 4rem;
+}
+
+.education-list {
+    list-style: none;
+}
+
+.education-list li {
+    margin-bottom: 1.25rem;
+}
+
+.education-list .card-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.education-list .description {
+    color: var(--color-text-secondary);
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
 @media (max-width: 640px) {
     header {
         flex-direction: column;
@@ -425,7 +464,10 @@ mark {
     .about,
     .skills,
     .projects,
-    .page-title {
+    .page-title,
+    .resume-section,
+    .education,
+    .contact {
         padding-left: 1.25rem;
         padding-right: 1.25rem;
     }
