@@ -1,6 +1,9 @@
 :root {
     --color-bg: #FBFAF7;
+    --color-surface: #FAFAFA;
     --color-ink: #1B1D22;
+    --color-muted: #6B6B6B;
+    --color-border: #E5E3DC;
     --color-accent: #3730A6;
     --color-accent-2: #0F6E56;
     --color-accent-3: #B8860B;
@@ -25,13 +28,13 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    border-bottom: 1px solid #E5E3DC;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .logo {
     font-family: var(--font-mono);
     font-weight: 700;
-    color: var(--color-ink);
+    color: var(--color-accent);
     text-decoration: none;
     font-size: 1.25rem;
 }
@@ -53,9 +56,15 @@ header {
     color: var(--color-accent);
 }
 
+.nav-bar a:hover {
+    text-decoration: underline;
+}
+
 .hero {
     max-width: 680px;
     padding: 4rem 2rem;
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .eyebrow {
@@ -127,13 +136,15 @@ header {
 
 .open-to {
     font-style: italic;
-    color: var(--color-accent-2);
+    color: var(--color-muted);
     font-size: 0.95rem;
 }
 
 .skills {
     max-width: 680px;
     padding: 2rem 2rem 4rem;
+    background-color: var(--color-surface);
+    border-top: 1px solid var(--color-border);
 }
 
 .skills .card-title {
