@@ -58,9 +58,20 @@ Site map — 3 pages:
 ---
 
 ## Use of GenAI
-TODO: fill in once the AI-generated page (resume.html) is built. Document: model name + version, the prompts used, and how the output was reviewed/edited.
-AI Agent - Claude
-Prompt - Build resume.html for a personal portfolio site, matching the existing visual system used in index.html and projects.html: CSS variables for colors (--color-bg: #FBFAF7, --color-surface: #FAFAFA, --color-ink: #1B1D22, --color-accent: #3730A6, --color-accent-2: #0F6E56, --color-accent-3: #B8860B), fonts (Newsreader serif for body/headings, JetBrains Mono for tags/labels/nav), the same header/nav structure, and the small-uppercase-indigo .page-title label style used on the Projects page. Single-column stacked layout, left-aligned, matching the rest of the site — no side-by-side columns. The page needs three sections: (1) a Resume section with a download link/button to a PDF resume, (2) an Education section listing three degrees — Northeastern University M.S. Computer Science (AI/ML focus), expected June 2027; General Assembly Software Engineering Immersive (450+ hrs), June 2023; New York University B.F.A. — and (3) a Contact section with an email link, GitHub link, and LinkedIn link. Use semantic HTML5, proper heading hierarchy (this page's own <h1> should be "Resume"), and reuse existing class names/patterns from the other two pages wherever the same visual pattern applies (e.g. .btn-primary for the download button).
+
+The `resume.html` page (Resume, Education, and Contact sections) was built using **Claude** (Anthropic), accessed via claude.ai. The other two pages (`index.html`, `projects.html`) were hand-coded without AI assistance, and were used as style/context reference before generating `resume.html`.
+
+**Prompt used:**
+
+> Build `resume.html` for a personal portfolio site, matching the existing visual system used in `index.html` and `projects.html`: CSS variables for colors (`--color-bg: #FBFAF7`, `--color-surface: #FAFAFA`, `--color-ink: #1B1D22`, `--color-accent: #3730A6`, `--color-accent-2: #0F6E56`, `--color-accent-3: #B8860B`), fonts (`Newsreader` serif for body/headings, `JetBrains Mono` for tags/labels/nav), the same header/nav structure, and the small-uppercase-indigo `.page-title` label style used on the Projects page. Single-column stacked layout, left-aligned, matching the rest of the site — no side-by-side columns. The page needs three sections: (1) a Resume section with a download link/button to a PDF resume, (2) an Education section listing three degrees — Northeastern University M.S. Computer Science (AI/ML focus), expected June 2027; General Assembly Software Engineering Immersive (450+ hrs), June 2023; New York University B.F.A. — and (3) a Contact section with an email link, GitHub link, and LinkedIn link. Use semantic HTML5, proper heading hierarchy (this page's own `<h1>` should be "Resume"), and reuse existing class names/patterns from the other two pages wherever the same visual pattern applies (e.g. `.btn-primary` for the download button).
+
+The generated HTML was reviewed line by line and then iterated on directly — including converting the Education section into a clickable horizontal timeline linking to each institution's website, and fixing spacing/alignment issues that came up during review.
+
+**What went well:** the generated HTML correctly reused existing class names (`.page-title`, `.btn-primary`, `.card-title`, `.description`) instead of inventing new ones, matched the semantic structure and heading hierarchy of the other two pages, and got the overall three-section layout right on the first pass.
+
+**What didn't go well:** the initial CSS for the page had a layout bug — `.page-title` retained leftover horizontal padding meant for a different context, which combined with the section's own padding to visually misalign the section titles from the buttons/content beneath them. This wasn't caught until reviewing the rendered page, not from reading the code alone, which reinforced why visual review matters even when the code looks correct on paper.
+
+**What was changed after generation:** after reviewing the plain bulleted Education list, I decided it under-used the fact that all three entries are chronological — so I redesigned it into a horizontal, clickable timeline (each entry links to the institution's website), which the AI's original output did not include and wasn't part of the original prompt. The padding/alignment bug above was also fixed manually, and one factual correction was made (NYU's B.F.A. date, June 2013, wasn't in the original prompt and was added afterward).
 
 ## License
 MIT — see [LICENSE](./LICENSE)
