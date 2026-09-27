@@ -53,7 +53,7 @@ Site map — 3 pages:
 - `projects.html` (hand-coded) — featured projects, currently-building NER project, interactive entity-highlighter demo
 - `resume.html` (AI-generated, see below) — resume download, education, contact
 
-![Homepage mockup](images/homepage-mockup.svg)
+![Homepage mockup](images/mockup.svg)
 
 ---
 
