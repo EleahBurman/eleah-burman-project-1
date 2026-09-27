@@ -107,3 +107,26 @@ header {
 .btn-secondary:hover {
     background-color: #F0EFE9;
 }
+
+.about {
+    max-width: 680px;
+    padding: 2rem 2rem 4rem;
+}
+
+.about .card-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.about .description {
+    font-size: 1.05rem;
+    color: #4A4A4A;
+    margin-bottom: 1rem;
+}
+
+.open-to {
+    font-style: italic;
+    color: var(--color-accent-2);
+    font-size: 0.95rem;
+}
