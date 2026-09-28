@@ -4,8 +4,7 @@
 Eleah Burman
 
 ## Class Link
-CS5610 Web Development — Northeastern University, taught by John Alexis Guerra Gómez
-TODO: add the course site/syllabus link here
+[CS 5610 Web Development (Online), Northeastern University — Fall 2026](https://johnguerra.co/classes/webDevelopment_online_fall_2026/)
 
 ## Project Objective
 A personal, tech-forward portfolio homepage built with vanilla HTML5, CSS3, and ES6 modules — no frameworks, no backend. The site targets recruiters and hiring managers in ML/NLP and software engineering, presenting my background, real projects, and an interactive JavaScript demo that reflects the NLP work I actually build.
