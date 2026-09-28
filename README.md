@@ -92,4 +92,7 @@ MIT — see [LICENSE](./LICENSE)
 
 ## Video Demo
 
-[https://youtu.be/-n8Jk_Pxwsk](https://youtu.be/-n8Jk_Pxwsk)
+[https://www.youtube.com/watch?v=Cg_neMamNAo](https://www.youtube.com/watch?v=Cg_neMamNAo)
+
+## Google Slides
+[Google Slides](https://docs.google.com/presentation/d/1gNqi1TXysgJx9m1PVnnMoFNNb2h376PzmKPr4at87gc/edit?usp=sharing)
