@@ -2,24 +2,24 @@
 // when a filter button is clicked, using each element's data-category attribute
 // to match buttons to their corresponding skill group.
 
-const filterButtons = document.querySelectorAll('.filter-btn');
-const skillGroups = document.querySelectorAll('.skill-group');
+const filterButtons = document.querySelectorAll(".filter-btn");
+const skillGroups = document.querySelectorAll(".skill-group");
 
 filterButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-        filterButtons.forEach((btn) => btn.classList.remove('active'));
-        button.classList.add('active');
+  button.addEventListener("click", () => {
+    filterButtons.forEach((btn) => btn.classList.remove("active"));
+    button.classList.add("active");
 
-        const selected = button.dataset.category;
+    const selected = button.dataset.category;
 
-        skillGroups.forEach((group) => {
-            if (selected === 'all' || group.dataset.category === selected) {
-                group.style.display = 'block';
-            } else {
-                group.style.display = 'none';
-            }
-        });
+    skillGroups.forEach((group) => {
+      if (selected === "all" || group.dataset.category === selected) {
+        group.style.display = "block";
+      } else {
+        group.style.display = "none";
+      }
     });
+  });
 });
 
 // Rule-based "entity highlighter" — a simplified, client-side stand-in for
@@ -34,105 +34,105 @@ filterButtons.forEach((button) => {
 // simple lookup demo, not real NLP, so it has no tolerance for typos or
 // entities it's never seen before.
 const entities = [
-    { text: 'Eleah Burman', category: 'person' },
-    { text: 'Eleah', category: 'person' },
-    { text: 'Adam', category: 'person' },
-    { text: 'Alex', category: 'person' },
-    { text: 'James', category: 'person' },
-    { text: 'John', category: 'person' },
-    { text: 'Robert', category: 'person' },
-    { text: 'Michael', category: 'person' },
-    { text: 'David', category: 'person' },
-    { text: 'William', category: 'person' },
-    { text: 'Richard', category: 'person' },
-    { text: 'Joseph', category: 'person' },
-    { text: 'Thomas', category: 'person' },
-    { text: 'Daniel', category: 'person' },
-    { text: 'Matthew', category: 'person' },
-    { text: 'Andrew', category: 'person' },
-    { text: 'Christopher', category: 'person' },
-    { text: 'Joshua', category: 'person' },
-    { text: 'Ryan', category: 'person' },
-    { text: 'Brandon', category: 'person' },
-    { text: 'Justin', category: 'person' },
-    { text: 'Kevin', category: 'person' },
-    { text: 'Jason', category: 'person' },
-    { text: 'Sam', category: 'person' },
-    { text: 'Mary', category: 'person' },
-    { text: 'Patricia', category: 'person' },
-    { text: 'Jennifer', category: 'person' },
-    { text: 'Linda', category: 'person' },
-    { text: 'Barbara', category: 'person' },
-    { text: 'Susan', category: 'person' },
-    { text: 'Jessica', category: 'person' },
-    { text: 'Sarah', category: 'person' },
-    { text: 'Scott', category: 'person' },
-    { text: 'Richard', category: 'person' },
-    { text: 'Russell', category: 'person' },
-    { text: 'Audrey', category: 'person' },
-    { text: 'Karen', category: 'person' },
-    { text: 'Joshua', category: 'person' },
-    { text: 'Priya', category: 'person' },
-    { text: 'Emily', category: 'person' },
-    { text: 'Amanda', category: 'person' },
-    { text: 'Melissa', category: 'person' },
-    { text: 'Michelle', category: 'person' },
-    { text: 'Laura', category: 'person' },
-    { text: 'Rachel', category: 'person' },
-    { text: 'Nicole', category: 'person' },
-    { text: 'Ashley', category: 'person' },
-    { text: 'Priyanka', category: 'person' },
-    { text: 'Wei', category: 'person' },
-    { text: 'Aiden', category: 'person' },
-    { text: 'Olivia', category: 'person' },
-    { text: 'Sophia', category: 'person' },
-    { text: 'Liam', category: 'person' },
-    { text: 'Noah', category: 'person' },
-    { text: 'Ava', category: 'person' },
-    { text: 'Mia', category: 'person' },
-    { text: 'Ethan', category: 'person' },
-    { text: 'Isabella', category: 'person' },
-    { text: 'Lucas', category: 'person' },
-    { text: 'Tokio Marine HCC', category: 'org' },
-    { text: 'Northeastern University', category: 'org' },
-    { text: 'Northeastern', category: 'org' },
-    { text: 'Hugging Face', category: 'org' },
-    { text: 'Google', category: 'org' },
-    { text: 'Microsoft', category: 'org' },
-    { text: 'OpenAI', category: 'org' },
-    { text: 'Anthropic', category: 'org' },
-    { text: 'Meta', category: 'org' },
-    { text: 'Facebook', category: 'org' },
-    { text: 'Twitter', category: 'org' },
-    { text: 'Spotify', category: 'org' },
-    { text: 'New York', category: 'loc' },
-    { text: 'NY', category: 'loc' },
-    { text: 'LA', category: 'loc'},
-    { text: 'Los Angeles', category: 'loc'},
-    { text: 'San Francisco', category: 'loc' },
-    { text: 'Boston', category: 'loc' },
-    { text: 'Python', category: 'tech' },
-    { text: 'Java', category: 'tech' },
-    { text: 'JavaScript', category: 'tech' },
-    { text: 'TypeScript', category: 'tech' },
-    { text: 'SQL', category: 'tech' },
-    { text: 'React.js', category: 'tech' },
-    { text: 'Node.js', category: 'tech' },
-    { text: 'Express.js', category: 'tech' },
-    { text: 'Vue.js', category: 'tech' },
-    { text: 'Flask', category: 'tech' },
-    { text: 'FastAPI', category: 'tech' },
-    { text: 'Django', category: 'tech' },
-    { text: 'PyTorch', category: 'tech' },
-    { text: 'spaCy', category: 'tech' },
-    { text: 'NLTK', category: 'tech' },
-    { text: 'scikit-learn', category: 'tech' },
-    { text: 'LightGBM', category: 'tech' },
-    { text: 'Claude API', category: 'tech' },
-    { text: 'Pandas', category: 'tech' },
-    { text: 'MongoDB', category: 'tech' },
-    { text: 'PostgreSQL', category: 'tech' },
-    { text: 'AWS', category: 'tech' },
+  { text: "Eleah Burman", category: "person" },
+  { text: "Eleah", category: "person" },
+  { text: "Adam", category: "person" },
+  { text: "Alex", category: "person" },
+  { text: "James", category: "person" },
+  { text: "John", category: "person" },
+  { text: "Robert", category: "person" },
+  { text: "Michael", category: "person" },
+  { text: "David", category: "person" },
+  { text: "William", category: "person" },
+  { text: "Richard", category: "person" },
+  { text: "Joseph", category: "person" },
+  { text: "Thomas", category: "person" },
+  { text: "Daniel", category: "person" },
+  { text: "Matthew", category: "person" },
+  { text: "Andrew", category: "person" },
+  { text: "Christopher", category: "person" },
+  { text: "Joshua", category: "person" },
+  { text: "Ryan", category: "person" },
+  { text: "Brandon", category: "person" },
+  { text: "Justin", category: "person" },
+  { text: "Kevin", category: "person" },
+  { text: "Jason", category: "person" },
+  { text: "Sam", category: "person" },
+  { text: "Mary", category: "person" },
+  { text: "Patricia", category: "person" },
+  { text: "Jennifer", category: "person" },
+  { text: "Linda", category: "person" },
+  { text: "Barbara", category: "person" },
+  { text: "Susan", category: "person" },
+  { text: "Jessica", category: "person" },
+  { text: "Sarah", category: "person" },
+  { text: "Scott", category: "person" },
+  { text: "Richard", category: "person" },
+  { text: "Russell", category: "person" },
+  { text: "Audrey", category: "person" },
+  { text: "Karen", category: "person" },
+  { text: "Joshua", category: "person" },
+  { text: "Priya", category: "person" },
+  { text: "Emily", category: "person" },
+  { text: "Amanda", category: "person" },
+  { text: "Melissa", category: "person" },
+  { text: "Michelle", category: "person" },
+  { text: "Laura", category: "person" },
+  { text: "Rachel", category: "person" },
+  { text: "Nicole", category: "person" },
+  { text: "Ashley", category: "person" },
+  { text: "Priyanka", category: "person" },
+  { text: "Wei", category: "person" },
+  { text: "Aiden", category: "person" },
+  { text: "Olivia", category: "person" },
+  { text: "Sophia", category: "person" },
+  { text: "Liam", category: "person" },
+  { text: "Noah", category: "person" },
+  { text: "Ava", category: "person" },
+  { text: "Mia", category: "person" },
+  { text: "Ethan", category: "person" },
+  { text: "Isabella", category: "person" },
+  { text: "Lucas", category: "person" },
+  { text: "Tokio Marine HCC", category: "org" },
+  { text: "Northeastern University", category: "org" },
+  { text: "Northeastern", category: "org" },
+  { text: "Hugging Face", category: "org" },
+  { text: "Google", category: "org" },
+  { text: "Microsoft", category: "org" },
+  { text: "OpenAI", category: "org" },
+  { text: "Anthropic", category: "org" },
+  { text: "Meta", category: "org" },
+  { text: "Facebook", category: "org" },
+  { text: "Twitter", category: "org" },
+  { text: "Spotify", category: "org" },
+  { text: "New York", category: "loc" },
+  { text: "NY", category: "loc" },
+  { text: "LA", category: "loc" },
+  { text: "Los Angeles", category: "loc" },
+  { text: "San Francisco", category: "loc" },
+  { text: "Boston", category: "loc" },
+  { text: "Python", category: "tech" },
+  { text: "Java", category: "tech" },
+  { text: "JavaScript", category: "tech" },
+  { text: "TypeScript", category: "tech" },
+  { text: "SQL", category: "tech" },
+  { text: "React.js", category: "tech" },
+  { text: "Node.js", category: "tech" },
+  { text: "Express.js", category: "tech" },
+  { text: "Vue.js", category: "tech" },
+  { text: "Flask", category: "tech" },
+  { text: "FastAPI", category: "tech" },
+  { text: "Django", category: "tech" },
+  { text: "PyTorch", category: "tech" },
+  { text: "spaCy", category: "tech" },
+  { text: "NLTK", category: "tech" },
+  { text: "scikit-learn", category: "tech" },
+  { text: "LightGBM", category: "tech" },
+  { text: "Claude API", category: "tech" },
+  { text: "Pandas", category: "tech" },
+  { text: "MongoDB", category: "tech" },
+  { text: "PostgreSQL", category: "tech" },
+  { text: "AWS", category: "tech" },
 ];
 
 // Converts user-typed text into safe HTML text (turns "<" into "&lt;", etc.)
@@ -140,16 +140,16 @@ const entities = [
 // into the textarea. Always escape user input before inserting it into
 // the page with innerHTML.
 function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
+  const div = document.createElement("div");
+  div.textContent = text;
+  return div.innerHTML;
 }
 
 // Escapes characters that have special meaning in a regular expression
 // (like the "." in "React.js") so they're treated as literal characters
 // to search for, not as regex syntax.
 function escapeRegex(text) {
-    return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 // Sort entities longest-first before building the search pattern. This
@@ -157,7 +157,9 @@ function escapeRegex(text) {
 // "Eleah" inside "Eleah Burman") — checking the longer one first means the
 // full name gets matched as a whole, instead of "Eleah" matching alone and
 // leaving " Burman" behind unmatched.
-const sortedEntities = [...entities].sort((a, b) => b.text.length - a.text.length);
+const sortedEntities = [...entities].sort(
+  (a, b) => b.text.length - a.text.length
+);
 
 // Build one big regex that matches ANY of the entity names at once, using
 // "|" (OR) between each escaped name. \b on each side means "only match
@@ -165,8 +167,10 @@ const sortedEntities = [...entities].sort((a, b) => b.text.length - a.text.lengt
 // flags mean: g = find every match in the text, not just the first;
 // i = ignore uppercase/lowercase when matching.
 const entityPattern = new RegExp(
-    '\\b(' + sortedEntities.map((entity) => escapeRegex(entity.text)).join('|') + ')\\b',
-    'gi'
+  "\\b(" +
+    sortedEntities.map((entity) => escapeRegex(entity.text)).join("|") +
+    ")\\b",
+  "gi"
 );
 
 // Given a piece of matched text (e.g. "python" typed lowercase), find which
@@ -174,30 +178,32 @@ const entityPattern = new RegExp(
 // insensitively, since someone might not type it with the exact casing
 // shown in the dictionary above.
 function findCategory(matchedText) {
-    const lowerMatch = matchedText.toLowerCase();
-    const found = entities.find((entity) => entity.text.toLowerCase() === lowerMatch);
-    return found ? found.category : null;
+  const lowerMatch = matchedText.toLowerCase();
+  const found = entities.find(
+    (entity) => entity.text.toLowerCase() === lowerMatch
+  );
+  return found ? found.category : null;
 }
 
 // Takes the raw text someone typed, escapes it for safety, then replaces
 // every entity match with the same text wrapped in a <mark> tag carrying
 // a category-specific class which CSS then colors.
 function highlightEntities(text) {
-    const safeText = escapeHtml(text);
-    return safeText.replace(entityPattern, (match) => {
-        const category = findCategory(match);
-        return `<mark class="entity-${category}">${match}</mark>`;
-    });
+  const safeText = escapeHtml(text);
+  return safeText.replace(entityPattern, (match) => {
+    const category = findCategory(match);
+    return `<mark class="entity-${category}">${match}</mark>`;
+  });
 }
 
 // Grab references to the textarea (where someone types) and the output
 // div (where the highlighted result gets displayed).
-const inputDemo = document.getElementById('input-demo');
-const highlightOutput = document.getElementById('highlight-output');
+const inputDemo = document.getElementById("input-demo");
+const highlightOutput = document.getElementById("highlight-output");
 
 // Every time the text in the textarea changes (on each keystroke), re-run
 // the highlighter and update the output div with the new result — this is
 // what makes the highlighting feel "live" instead of needing a submit button.
-inputDemo.addEventListener('input', () => {
-    highlightOutput.innerHTML = highlightEntities(inputDemo.value);
+inputDemo.addEventListener("input", () => {
+  highlightOutput.innerHTML = highlightEntities(inputDemo.value);
 });
