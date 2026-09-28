@@ -78,3 +78,6 @@ The generated HTML was reviewed line by line and then iterated on directly — i
 
 ## License
 MIT — see [LICENSE](./LICENSE)
+
+## Video Demo
+[https://youtu.be/-n8Jk_Pxwsk](https://youtu.be/-n8Jk_Pxwsk)
