@@ -4,6 +4,10 @@
 
 Eleah Burman
 
+## Live Site
+
+[https://eleahburman.github.io/eleah-burman-project-1/](https://eleahburman.github.io/eleah-burman-project-1/)
+
 ## Class Link
 
 [CS 5610 Web Development (Online), Northeastern University — Fall 2026](https://johnguerra.co/classes/webDevelopment_online_fall_2026/)
@@ -15,10 +19,6 @@ A personal, tech-forward portfolio homepage built with vanilla HTML5, CSS3, and 
 ## Screenshot
 
 ![Homepage screenshot](images/site-screenshot.png)
-
-## Live Site
-
-[https://eleahburman.github.io/eleah-burman-project-1/](https://eleahburman.github.io/eleah-burman-project-1/)
 
 ## Instructions to Build
 
