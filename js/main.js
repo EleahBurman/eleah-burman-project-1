@@ -158,7 +158,7 @@ function escapeRegex(text) {
 // full name gets matched as a whole, instead of "Eleah" matching alone and
 // leaving " Burman" behind unmatched.
 const sortedEntities = [...entities].sort(
-  (a, b) => b.text.length - a.text.length
+  (a, b) => b.text.length - a.text.length,
 );
 
 // Build one big regex that matches ANY of the entity names at once, using
@@ -170,7 +170,7 @@ const entityPattern = new RegExp(
   "\\b(" +
     sortedEntities.map((entity) => escapeRegex(entity.text)).join("|") +
     ")\\b",
-  "gi"
+  "gi",
 );
 
 // Given a piece of matched text (e.g. "python" typed lowercase), find which
@@ -180,7 +180,7 @@ const entityPattern = new RegExp(
 function findCategory(matchedText) {
   const lowerMatch = matchedText.toLowerCase();
   const found = entities.find(
-    (entity) => entity.text.toLowerCase() === lowerMatch
+    (entity) => entity.text.toLowerCase() === lowerMatch,
   );
   return found ? found.category : null;
 }

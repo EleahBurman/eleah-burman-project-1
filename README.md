@@ -1,27 +1,33 @@
 # Eleah Burman — Personal Homepage (Project 1)
 
 ## Author
+
 Eleah Burman
 
 ## Class Link
+
 [CS 5610 Web Development (Online), Northeastern University — Fall 2026](https://johnguerra.co/classes/webDevelopment_online_fall_2026/)
 
 ## Project Objective
+
 A personal, tech-forward portfolio homepage built with vanilla HTML5, CSS3, and ES6 modules — no frameworks, no backend. The site targets recruiters and hiring managers in ML/NLP and software engineering, presenting my background, real projects, and an interactive JavaScript demo that reflects the NLP work I actually build.
 
 ## Screenshot
+
 ![Homepage screenshot](images/site-screenshot.png)
 
 ## Live Site
+
 [https://eleahburman.github.io/eleah-burman-project-1/](https://eleahburman.github.io/eleah-burman-project-1/)
 
-
 ## Instructions to Build
+
 ```bash
 git clone https://github.com/EleahBurman/eleah-burman-project-1.git
 cd eleah-burman-project-1
 npm install
 ```
+
 Open `index.html` in a browser, or serve locally with a static server of your choice.
 TODO: update this once you know your actual deploy/run steps (e.g. live-server, GitHub Pages).
 
@@ -30,6 +36,7 @@ TODO: update this once you know your actual deploy/run steps (e.g. live-server, 
 ## Design Document
 
 ### Project description
+
 A tech-forward personal homepage supporting my Summer 2027 internship and full-time SWE/ML search. The site presents my background (Northeastern M.S. CS, current SWE role at Tokio Marine HCC, B.F.A. from NYU) and real technical projects to recruiters and hiring managers at quant firms, AI labs, and tech companies. Built with vanilla HTML5/CSS3/ES6+, deployed publicly, with an interactive JS feature (an entity highlighter) that echoes my in-progress NER fine-tuning project.
 
 ### User Personas
@@ -44,6 +51,7 @@ Cares more about the actual work than flashy design. He wants clear project desc
 Found the site through class or LinkedIn. Wants to see what Eleah is currently working on and potentially connect or collaborate.
 
 ### User Stories
+
 - As a technical recruiter, I want to see Eleah's current role and the types of positions she's looking for right away, so I can quickly decide if she's a potential fit.
 - As a hiring manager, I want to click on a project and see what technologies were used and a link to the repository, so I can get a better idea of her experience.
 - As a mobile visitor, I want the website to work well on my phone, so I can easily look through it without the layout being difficult to use.
@@ -51,7 +59,9 @@ Found the site through class or LinkedIn. Wants to see what Eleah is currently w
 - As a networking contact, I want to see what Eleah is currently working on, so I have an idea of what to talk to her about.
 
 ### Design mockups
+
 Site map — 3 pages:
+
 - `index.html` (hand-coded) — hero, about, skills
 - `projects.html` (hand-coded) — featured projects, currently-building NER project, interactive entity-highlighter demo
 - `resume.html` (AI-generated, see below) — resume download, education, contact
@@ -77,7 +87,9 @@ The generated HTML was reviewed line by line and then iterated on directly — i
 **What was changed after generation:** after reviewing the plain bulleted Education list, I decided it under-used the fact that all three entries are chronological — so I redesigned it into a horizontal, clickable timeline (each entry links to the institution's website), which the AI's original output did not include and wasn't part of the original prompt. The padding/alignment bug above was also fixed manually, and one factual correction was made (NYU's B.F.A. date, June 2013, wasn't in the original prompt and was added afterward).
 
 ## License
+
 MIT — see [LICENSE](./LICENSE)
 
 ## Video Demo
+
 [https://youtu.be/-n8Jk_Pxwsk](https://youtu.be/-n8Jk_Pxwsk)
